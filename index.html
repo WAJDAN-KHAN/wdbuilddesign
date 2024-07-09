@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script async="" src="js/sp-2.0.0-dm-0.1.min.js"></script>
+    <script async="" src="js/fbevents.js"></script>
+    <script type="text/javascript">
+        window._currentDevice = 'desktop';
+        window.Parameters = window.Parameters || {
+            HomeUrl: 'https://www.wdbuilddesign.com.au/',
+            AccountUUID: 'c2145a0f2d4e4867bc3f7718b804daa5',
+            SystemID: 'US_DIRECT_PRODUCTION',
+            SiteAlias: '5bb54c53',
+            SiteType: atob('RFVEQU9ORQ=='),
+            PublicationDate: 'Mon Jul 08 00:10:23 UTC 2024',
+            ExternalUid: null,
+            IsSiteMultilingual: false,
+            InitialPostAlias: '',
+            InitialDynamicItem: '',
+            DynamicPageInfo: {
+                isDynamicPage: false,
+                base64JsonRowData: 'null',
+            },
+            InitialPageAlias: 'home',
+            InitialPageUuid: '472b33c0d809470b956a6187f8a4de2e',
+            InitialPageId: '30681838',
+            InitialEncodedPageAlias: 'aG9tZQ==',
+            CurrentPageUrl: '',
+            IsCurrentHomePage: true,
+            AllowAjax: false,
+            AfterAjaxCommand: null,
+            HomeLinkText: 'Back To Home',
+            UseGalleryModule: false,
+            CurrentThemeName: 'Layout Theme',
+            ThemeVersion: '45590',
+            DefaultPageAlias: '',
+            RemoveDID: true,
+            WidgetStyleID: null,
+            IsHeaderFixed: false,
+            IsHeaderSkinny: false,
+            IsBfs: true,
+            StorePageAlias: 'null',
+            StorePagesUrls: 'e30=',
+            IsNewStore: 'false',
+            StorePath: '',
+            StoreId: 'null',
+            StoreVersion: 0,
+            StoreBaseUrl: '',
+            StoreCleanUrl: true,
+            StoreDisableScrolling: true,
+            IsStoreSuspended: false,
+            NotificationSubDomain: 'wdbuilddesign',
+            HasCustomDomain: true,
+            SimpleSite: false,
+            showCookieNotification: false,
+            cookiesNotificationMarkup: 'null',
+            translatedPageUrl: '',
+            isFastMigrationSite: false,
+            sidebarPosition: 'NA',
+            currentLanguage: 'en',
+            currentLocale: 'en-gb',
+            NavItems: '{}',
+            errors: {
+                general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+                password: 'Incorrect name/password combination',
+                tryAgain: 'Try again'
+            },
+            NavigationAreaParams: {
+                ShowBackToHomeOnInnerPages: true,
+                NavbarSize: -1,
+                NavbarLiveHomePage: 'https://www.wdbuilddesign.com.au/',
+                BlockContainerSelector: '.dmBody',
+                NavbarSelector: '#dmNav:has(a)',
+                SubNavbarSelector: '#subnav_main'
+            },
+            hasCustomCode: true,
+            planID: '7',
+            customTemplateId: 'null',
+            siteTemplateId: 'null',
+            productId: 'DM_DIRECT',
+            disableTracking: false,
+            pageType: 'FROM_SCRATCH',
+            isRuntimeServer: true,
+            isInEditor: false,
+            hasNativeStore: false
+        };
+
+        window.Parameters.LayoutID = {};
+        window.Parameters.LayoutID[window._currentDevice] = 6;
+        window.Parameters.LayoutVariationID = {};
+        window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Injecting site-wide to the head -->
+
+
+
+
+    <!-- End Injecting site-wide to the head -->
+
+    <!-- Inject secured cdn script -->
+
+
+    <!-- ========= Meta Tags ========= -->
+    <!-- PWA settings -->
+    <script>
+        function toHash(str) {
+            var hash = 5381, i = str.length;
+            while (i) {
+                hash = hash * 33 ^ str.charCodeAt(--i)
+            }
+            return hash >>> 0
+        }
+    </script>
+    <script>
+        (function (global) {
+            //const cacheKey = global.cacheKey;
+            const isOffline = 'onLine' in navigator && navigator.onLine === false;
+            const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+            if (isOffline) {
+                console.log('offline mode');
+            }
+            if (!hasServiceWorkerSupport) {
+                console.log('service worker is not supported');
+            }
+            if (hasServiceWorkerSupport && !isOffline) {
+                window.addEventListener('load', function () {
+                    const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+                    navigator.serviceWorker
+                        .register(serviceWorkerPath, { scope: './' })
+                        .then(
+                            function (registration) {
+                                // Registration was successful
+                                console.log(
+                                    'ServiceWorker registration successful with scope: ',
+                                    registration.scope
+                                );
+                            },
+                            function (err) {
+                                // registration failed :(
+                                console.log('ServiceWorker registration failed: ', err);
+                            }
+                        )
+                        .catch(function (err) {
+                            console.log(err);
+                        });
+                });
+
+                // helper function to refresh the page
+                var refreshPage = (function () {
+                    var refreshing;
+                    return function () {
+                        if (refreshing) return;
+                        // prevent multiple refreshes
+                        var refreshkey = 'refreshed' + location.href;
+                        var prevRefresh = localStorage.getItem(refreshkey);
+                        if (prevRefresh) {
+                            localStorage.removeItem(refreshkey);
+                            if (Date.now() - prevRefresh < 30000) {
+                                return; // dont go into a refresh loop
+                            }
+                        }
+                        refreshing = true;
+                        localStorage.setItem(refreshkey, Date.now());
+                        console.log('refereshing page');
+                        window.location.reload();
+                    };
+                })();
+
+                function messageServiceWorker(data) {
+                    return new Promise(function (resolve, reject) {
+                        if (navigator.serviceWorker.controller) {
+                            var worker = navigator.serviceWorker.controller;
+                            var messageChannel = new MessageChannel();
+                            messageChannel.port1.onmessage = replyHandler;
+                            worker.postMessage(data, [messageChannel.port2]);
+                            function replyHandler(event) {
+                                resolve(event.data);
+                            }
+                        } else {
+                            resolve();
+                        }
+                    });
+                }
+            }
+        })(window);
+    </script>
+    <!-- Add manifest -->
+    <!-- End PWA settings -->
+
+
+
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="https://www.wdbuilddesign.com.au/">
+
+    <meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--Add favorites icons-->
+
+    <link rel="apple-touch-icon" href="images/WD-homescreen-icon.png">
+
+    <link rel="icon" type="image/x-icon" href="site_favicon_16_1631143570505.ico">
+
+    <!-- End favorite icons -->
+    <link rel="preconnect" href="https://lirp.cdn-website.com/">
+
+
+
+    <!-- render the required CSS and JS in the head section -->
+    <script>
+        window.SystemID = 'US_DIRECT_PRODUCTION';
+
+        if (!window.dmAPI) {
+            window.dmAPI = {
+                registerExternalRuntimeComponent: function () {
+                },
+                getCurrentDeviceType: function () {
+                    return window._currentDevice;
+                }
+            };
+        }
+
+        if (!window.requestIdleCallback) {
+            window.requestIdleCallback = function (fn) {
+                setTimeout(fn, 0);
+            }
+        }
+    </script>
+
+    <!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+    <script id="d-js-load-css">
+        /**
+         * There are a few <link> tags with CSS resource in them that are preloaded in the page
+         * in each of those there is a "onload" handler which invokes the loadCSS callback
+         * defined here.
+         * We are monitoring 3 main CSS files - the runtime, the global and the page.
+         * When each load we check to see if we can append them all in a batch. If threre
+         * is no page css (which may happen on inner pages) then we do not wait for it
+         */
+        (function () {
+            let cssLinks = {};
+            function loadCssLink(link) {
+                link.onload = null;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+            }
+
+            function checkCss() {
+                const pageCssLink = document.querySelector("[id*='CssLink']");
+                const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+                if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+                    const storedRuntimeCssLink = cssLinks.runtime;
+                    const storedPageCssLink = cssLinks.page;
+                    const storedGlobalCssLink = cssLinks.global;
+                    const storedWidgetCssLink = cssLinks.widget;
+
+                    storedGlobalCssLink.disabled = true;
+                    loadCssLink(storedGlobalCssLink);
+
+                    if (storedPageCssLink) {
+                        storedPageCssLink.disabled = true;
+                        loadCssLink(storedPageCssLink);
+                    }
+
+                    if (storedWidgetCssLink) {
+                        storedWidgetCssLink.disabled = true;
+                        loadCssLink(storedWidgetCssLink);
+                    }
+
+                    storedRuntimeCssLink.disabled = true;
+                    loadCssLink(storedRuntimeCssLink);
+
+                    requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            storedRuntimeCssLink.disabled = false;
+                            storedGlobalCssLink.disabled = false;
+                            if (storedPageCssLink) {
+                                storedPageCssLink.disabled = false;
+                            }
+                            if (storedWidgetCssLink) {
+                                storedWidgetCssLink.disabled = false;
+                            }
+                            // (SUP-4179) Clear the accumulated cssLinks only when we're
+                            // sure that the document has finished loading and the document 
+                            // has been parsed.
+                            if (document.readyState === 'interactive') {
+                                cssLinks = null;
+                            }
+                        }, 0);
+                    });
+                }
+            }
+
+
+            function loadCSS(link) {
+                try {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var noCSS = !!urlParams.get("nocss");
+                    var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+                    if (noCSS) {
+                        return;
+                    }
+                    if (link.href && link.href.includes("d-css-runtime")) {
+                        cssLinks.runtime = link;
+                        checkCss();
+                    } else if (link.id === "siteGlobalCss") {
+                        cssLinks.global = link;
+                        checkCss();
+                    }
+
+                    else if (link.id && link.id.includes("CssLink")) {
+                        cssLinks.page = link;
+                        checkCss();
+                    } else if (link.id && link.id.includes("widgetCSS")) {
+                        cssLinks.widget = link;
+                        checkCss();
+                    }
+
+                    else {
+                        requestIdleCallback(function () {
+                            window.setTimeout(function () {
+                                loadCssLink(link);
+                            }, parseInt(cssTimeout, 10));
+                        });
+                    }
+                } catch (e) {
+                    throw e
+                }
+            }
+            window.loadCSS = window.loadCSS || loadCSS;
+        })();
+    </script>
+
+
+
+    <script data-role="deferred-init" type="text/javascript">
+        /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+        function Def() {
+            this.promise = new Promise((function (a, b) {
+                this.resolve = a, this.reject = b
+            }).bind(this))
+        }
+
+        const defs = {};
+        window.getDeferred = function (a) {
+            return null == defs[a] && (defs[a] = new Def), defs[a]
+        }
+        window.waitForDeferred = function (b, a, c) {
+            let d = window?.getDeferred?.(b);
+            d
+                ? d.promise.then(a)
+                : c && ["complete", "interactive"].includes(document.readyState)
+                    ? setTimeout(a, 1)
+                    : c
+                        ? document.addEventListener("DOMContentLoaded", a)
+                        : console.error(`Deferred  does not exist`);
+        };
+    </script>
+    <style id="forceCssIncludes">
+        /* This file is auto-generated from a `scss` file with the same name */
+
+        .videobgwrapper {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border-radius: inherit
+        }
+
+        .videobgframe {
+            position: absolute;
+            width: 101%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            object-fit: fill
+        }
+
+        #dm video.videobgframe {
+            margin: 0
+        }
+
+        @media (max-width:767px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 80vh
+            }
+        }
+
+        @media (min-width:1025px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            .responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        #dm [data-show-on-page-only] {
+            display: none !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.site_content {
+            margin-top: 0 !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.hamburger-header-container {
+            position: relative
+        }
+    </style>
+    <style id="cssVariables" type="text/css">
+        :root {
+            --color_1: rgba(0, 0, 0, 1);
+            --color_2: rgba(226, 226, 225, 1);
+            --color_3: rgba(255, 255, 255, 1);
+            --color_4: rgba(69, 69, 69, 1);
+            --color_5: rgba(30, 122, 191, 1);
+            --color_6: rgba(34, 34, 34, 1);
+            --color_7: rgba(238, 238, 238, 1);
+            --color_8: rgba(238, 238, 238, 1);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- loadCSS function fonts.jsp-->
+
+
+
+    <link type="text/css" rel="stylesheet"
+        href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;subset=latin-ext&amp;display=swap">
+
+
+
+
+
+    <!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+    <link rel="stylesheet" type="text/css" href="css/d-css-runtime-desktop-one-package-structured-global.min.css">
+
+    <!-- End of RT CSS Include -->
+
+    <link type="text/css" rel="stylesheet" href="css/af944448a001c2d7bcdf43bb669fca14.css" id="widgetCSS">
+
+    <!-- Support `img` size attributes -->
+    <style>
+        img[width][height] {
+            height: auto;
+        }
+    </style>
+
+    <!-- Support showing sticky element on page only -->
+    <style>
+        body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+            display: block !important;
+        }
+    </style>
+
+    <!-- This is populated in Ajax navigation -->
+    <style id="pageAdditionalWidgetsCss" type="text/css">
+    </style>
+
+
+
+
+    <!-- Site CSS -->
+    <link type="text/css" rel="stylesheet" href="css/5bb54c53_withFlex_1.min.css" id="siteGlobalCss">
+
+
+
+    <style id="customWidgetStyle" type="text/css">
+
+    </style>
+    <style id="innerPagesStyle" type="text/css">
+
+    </style>
+
+
+    <style id="additionalGlobalCss" type="text/css">
+    </style>
+
+    <!-- Page CSS -->
+    <link type="text/css" rel="stylesheet" href="css/5bb54c53_home_withFlex_1.min.css" id="homeCssLink">
+
+    <style id="pagestyle" type="text/css">
+
+    </style>
+
+    <style id="pagestyleDevice" type="text/css">
+
+    </style>
+
+    <!-- Flex Sections CSS -->
+
+
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">
+        .font-size-16,
+        .size-16,
+        .size-16>font {
+            font-size: 16px !important;
+        }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+
+
+    <style id="hideAnimFix">
+        .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+            visibility: hidden;
+        }
+
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+            visibility: hidden !important;
+        }
+    </style>
+
+
+
+
+    <style id="fontFallbacks">
+        @font-face {
+            font-family: "Roboto Fallback";
+            src: local('Arial');
+            ascent-override: 92.6709%;
+            descent-override: 24.3871%;
+            size-adjust: 100.1106%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Montserrat Fallback";
+            src: local('Arial');
+            ascent-override: 84.9466%;
+            descent-override: 22.0264%;
+            size-adjust: 113.954%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Lato Fallback";
+            src: local('Arial');
+            ascent-override: 101.3181%;
+            descent-override: 21.865%;
+            size-adjust: 97.4159%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "PT Sans Fallback";
+            src: local('Arial');
+            ascent-override: 104.2579%;
+            descent-override: 28.2664%;
+            size-adjust: 97.6425%;
+            line-gap-override: 0%;
+        }
+    </style>
+
+
+    <!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "WD Building Design",
+        "url" : "https://www.wdbuilddesign.com.au/"
+    }
+</script>
+    <title>
+        WD Building Design
+    </title>
+    <meta name="keywords" content="Building Design,Building Designers,House Plans,Queensland,Dalby">
+    <meta name="description"
+        content="WD Building Design are Queensland-based building designers. We create custom-designed buildings, from the coast to the country and all places between.">
+    <!-- Facebook Pixel Code -->
+    <script>
+
+
+
+
+
+
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '516338269425902');
+        fbq('track', 'PageView');
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WD Building Design">
+    <meta name="twitter:description"
+        content="WD Building Design are Queensland-based building designers. We create custom-designed buildings, from the coast to the country and all places between.">
+    <meta name="twitter:image"
+        content="https://lirp.cdn-website.com/5bb54c53/dms3rep/multi/opt/WD-logo-stacked-grey-200px-1920w.png">
+    <meta property="og:description"
+        content="WD Building Design are Queensland-based building designers. We create custom-designed buildings, from the coast to the country and all places between.">
+    <meta property="og:title" content="WD Building Design">
+    <meta property="og:image" content="images/WD-logo-stacked-grey-200px-1920w.png">
+    <script type="application/ld+json">
+{
+  "@context" : {
+    "@vocab" : "http://schema.org/"
+  },
+  "@type" : "ProfessionalService",
+  "name" : "WD Building Design",
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "37 Archibald St",
+    "addressLocality" : "Dalby",
+    "addressRegion" : "QLD",
+    "postalCode" : "4405",
+    "addressCountry" : "AUS"
+  },
+  "geo" : {
+    "@type" : "GeoCoordinates",
+    "latitude" : "-27.18115",
+    "longitude" : "151.26456"
+  },
+  "url" : "https://www.wdbuilddesign.com.au",
+  "telephone" : "+61745878902",
+  "email" : "info@wdbuilddesign.com.au",
+  "logo" : "https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-grey.svg",
+  "sameAs" : [ "https://facebook.com/WDBuildDesign/" ],
+  "image" : [ "https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-grey.svg", "https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-stacked-grey.svg", "https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-stacked-white.svg", "https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-white.svg" ],
+  "openingHoursSpecification" : [ {
+    "@type" : "OpeningHoursSpecification",
+    "dayOfWeek" : [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ],
+    "opens" : "07:00",
+    "closes" : "17:00"
+  } ],
+  "@id" : "https://www.wdbuilddesign.com.au"
+}
+</script>
+
+
+
+    <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="home"
+    class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet "
+    style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ========= Site Content ========= -->
+    <div id="dm" class="dmwr">
+
+        <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+            <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true">
+                <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger"
+                    class="runtime-module-container dm-bfs dm-layout-home hasAnimations rows-1200 hide-back-to-top hamburger-reverse dmPageBody d-page-1716942098 dmFreeHeader"
+                    id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true"
+                    data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
+                    <div id="dmStyle_outerContainer" class="dmOuter">
+                        <div id="dmStyle_innerContainer" class="dmInner">
+                            <div class="dmLayoutWrapper standard-var dmStandardDesktop">
+                                <div id="site_content">
+                                    <div class="p_hfcontainer showOnMedium">
+                                        <div id="hamburger-drawer" class="hamburger-drawer layout-drawer"
+                                            layout="409f4497cf4146ae996de35591cee226===header" data-origin="top"
+                                            data-auto-height="true">
+                                            <div class="u_1554841892 dmRespRow" style="text-align: center;"
+                                                id="1554841892">
+                                                <div class="dmRespColsWrapper" id="1088212689">
+                                                    <div class="u_1250087401 dmRespCol small-12 medium-12 large-12 empty-column"
+                                                        id="1250087401"></div>
+                                                </div>
+                                            </div>
+                                            <div class="u_1222709913 dmRespRow middleDrawerRow fullBleedChanged fullBleedMode"
+                                                style="text-align: center;" id="1222709913">
+                                                <div class="dmRespColsWrapper" id="1202497890">
+                                                    <div class="u_1316322049 dmRespCol small-12 medium-12 large-12"
+                                                        id="1316322049">
+                                                        <nav class="u_1571821689 effect-bottom2 main-navigation unifiednav dmLinksMenu"
+                                                            role="navigation" layout-main="vertical_nav_layout_2"
+                                                            layout-sub="" data-show-vertical-sub-items="HIDE"
+                                                            id="1571821689" dmle_extension="onelinksmenu"
+                                                            data-element-type="onelinksmenu" data-logo-src="" alt=""
+                                                            data-nav-structure="VERTICAL" wr="true" icon="true"
+                                                            surround="true" adwords="" navigation-id="unifiedNav">
+                                                            <ul role="menubar" class="unifiednav__container  "
+                                                                data-auto="navigation-pages">
+                                                                <li role="menuitem" class=" unifiednav__item-wrap "
+                                                                    data-auto="more-pages" data-depth="0"> <a
+                                                                        href="/#contact-us" class="unifiednav__item    "
+                                                                        target="" data-target-page-alias=""> <span
+                                                                            class="nav-item-text " data-link-text="
+         Contact Us
+        " data-auto="page-text-style">Contact Us<span class="icon icon-angle-down" data-hidden-on-mobile=""
+                                                                                data-hidden-on-desktop=""
+                                                                                data-hidden-on-tablet=""></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="u_1184934620 dmRespRow" style="text-align: center;"
+                                                id="1184934620">
+                                                <div class="dmRespColsWrapper" id="1084238716">
+                                                    <div class="u_1629320387 dmRespCol small-12 medium-12 large-12 empty-column"
+                                                        id="1629320387"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div>
+                                    </div>
+                                    <div class="site_content">
+                                        <div id="hamburger-header-container"
+                                            class="showOnMedium hamburger-header-container p_hfcontainer">
+                                            <div id="hamburger-header" class="hamburger-header p_hfcontainer"
+                                                layout="44dc38f951e9489490b055748e10ba9f===header" has-shadow="true">
+                                                <div class="u_1705692124 dmRespRow" style="text-align: center;"
+                                                    id="1705692124">
+                                                    <div class="dmRespColsWrapper" id="1469942216">
+                                                        <div class="dmRespCol small-12 u_1655486006 medium-12 large-12"
+                                                            id="1655486006">
+                                                            <div class="u_1923160809 imageWidget align-center"
+                                                                data-element-type="image" data-widget-type="image"
+                                                                id="1923160809"
+                                                                data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ==">
+                                                                <a id="1573522578" file="false" class="" href="/"><img
+                                                                        src="images/WD-logo-grey.svg" id="1761992403"
+                                                                        class=""
+                                                                        data-dm-image-path="https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-grey.svg"
+                                                                        data-diy-image="" alt=""
+                                                                        onerror="handleImageLoadError(this)"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="showOnMedium layout-drawer-hamburger hamburger-on-header"
+                                            id="layout-drawer-hamburger" aria-label="menu"> <span
+                                                class="hamburger__slice"></span>
+                                            <span class="hamburger__slice"></span>
+                                            <span class="hamburger__slice"></span>
+                                        </button>
+                                        <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge">
+                                            <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer"
+                                                freeheader="true"
+                                                headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5"
+                                                layout="29bf4fa55d88450885fbcefc03615aa2===header" has-shadow="true">
+                                                <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch"
+                                                    id="1709005236">
+                                                    <div class="u_1238423356 dmRespRow fullBleedChanged fullBleedMode"
+                                                        id="1238423356">
+                                                        <div class="dmRespColsWrapper" id="1672260358">
+                                                            <div class="u_1528913389 dmRespCol small-12 large-3 medium-3"
+                                                                id="1528913389">
+                                                                <div class="u_1681251069 imageWidget align-center"
+                                                                    data-element-type="image" data-widget-type="image"
+                                                                    id="1681251069"
+                                                                    data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMucGVyc2lzdGVkLldELWxvZ28tZ3JleSJ9XQ==">
+                                                                    <a id="1082376450" file="false" class=""
+                                                                        href="/"><img src="images/WD-logo-grey.svg"
+                                                                            alt="" id="1556134898" class=""
+                                                                            data-dm-image-path="https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-grey.svg"
+                                                                            data-hover-effect="opacity"
+                                                                            data-diy-image=""
+                                                                            onerror="handleImageLoadError(this)"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="u_1537838009 dmRespCol small-12 large-7 medium-7"
+                                                                id="1537838009">
+                                                                <nav class="u_1486714773 effect-bottom2 main-navigation unifiednav dmLinksMenu"
+                                                                    role="navigation"
+                                                                    layout-main="horizontal_nav_layout_1"
+                                                                    layout-sub="submenu_horizontal_1"
+                                                                    data-show-vertical-sub-items="HOVER" id="1486714773"
+                                                                    dmle_extension="onelinksmenu"
+                                                                    data-element-type="onelinksmenu" data-logo-src=""
+                                                                    alt="" data-nav-structure="HORIZONTAL" wr="true"
+                                                                    icon="true" surround="true" adwords=""
+                                                                    navigation-id="unifiedNav">
+                                                                    <ul role="menubar" class="unifiednav__container  "
+                                                                        data-auto="navigation-pages">
+                                                                        <li role="menuitem"
+                                                                            class=" unifiednav__item-wrap "
+                                                                            data-auto="more-pages" data-depth="0"> <a
+                                                                                href="/#contact-us"
+                                                                                class="unifiednav__item    " target=""
+                                                                                data-target-page-alias=""> <span
+                                                                                    class="nav-item-text "
+                                                                                    data-link-text="
+         Contact Us
+        " data-auto="page-text-style">Contact Us<span class="icon icon-angle-down" data-hidden-on-mobile=""
+                                                                                        data-hidden-on-desktop=""
+                                                                                        data-hidden-on-tablet=""></span>
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                            <div class="u_1969712942 dmRespCol small-12 large-2 medium-2"
+                                                                id="1969712942"> <a data-display-type="block"
+                                                                    class="u_1520178734 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1520178734 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient"
+                                                                    file="false" href="tel:+61745878902"
+                                                                    data-element-type="dButtonLinkId" id="1520178734"
+                                                                    target="_blank"
+                                                                    data-binding="W3siYmluZGluZ05hbWUiOiJsaW5rIiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLnBob25lLnBob25lIn1d"
+                                                                    data-diy-link=""> <span class="iconBg"
+                                                                        id="1759476509"> <span
+                                                                            class="icon hasFontIcon icon-star"
+                                                                            id="1481670005"></span>
+                                                                    </span>
+                                                                    <span class="text" id="1371219068"
+                                                                        data-diy-text="">07 4587 8902</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div dmwrapped="true" id="dmFirstContainer"
+                                            class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true">
+                                            <div id="allWrapper" class="allWrapper"><!-- navigation placeholders -->
+                                                <div id="dm_content" class="dmContent">
+                                                    <div dm:templateorder="170"
+                                                        class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl"
+                                                        id="1716942098">
+                                                        <div class="dmRespRow u_1116054682" id="1116054682">
+                                                            <div class="dmRespColsWrapper" id="1748995361">
+                                                                <div class="dmRespCol large-12 medium-12 small-12 u_1966263453"
+                                                                    id="1966263453">
+                                                                    <div class="dmNewParagraph"
+                                                                        data-element-type="paragraph" data-version="5"
+                                                                        id="1940926747"
+                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                        <h1><span style="display: unset;">Welcome to WD
+                                                                                Building Design</span></h1>
+                                                                        <p><span style="display: unset;">We're currently
+                                                                                working hard on our website to bring you
+                                                                                an enhanced experience. Meanwhile,
+                                                                                here's a glimpse of our
+                                                                                capabilities:</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dmRespRow u_1941923946" id="1941923946">
+                                                            <div class="dmRespColsWrapper" id="1595021772">
+                                                                <div class="dmRespCol large-6 medium-6 small-12 u_1496596823"
+                                                                    id="1496596823">
+                                                                    <div class="dmNewParagraph"
+                                                                        data-element-type="paragraph" data-version="5"
+                                                                        id="1071237249"
+                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                        <h2><span
+                                                                                style="display: unset; color: var(--color_8);">Innovative
+                                                                                and Functional Designs</span></h2>
+                                                                        <p><span
+                                                                                style="display: unset; color: var(--color_8);">At
+                                                                                WD Building Design, we specialize in
+                                                                                crafting innovative and functional
+                                                                                architectural designs that exceed
+                                                                                expectations. Our team of experienced
+                                                                                architects and designers is dedicated to
+                                                                                transforming visions into reality. From
+                                                                                residential spaces and commercial
+                                                                                complexes to industrial developments, we
+                                                                                thrive on delivering creative solutions
+                                                                                tailored to your needs.</span></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="dmRespCol large-6 medium-6 small-12 u_1383121552"
+                                                                    id="1383121552">
+                                                                    <div class="dmNewParagraph"
+                                                                        data-element-type="paragraph" data-version="5"
+                                                                        id="1136869140"
+                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                        <h2><span
+                                                                                style="display: initial; color: var(--color_8);">Coming
+                                                                                Soon</span></h2>
+                                                                        <p><span
+                                                                                style="display: initial; color: var(--color_8);">Stay
+                                                                                tuned for the launch of our full
+                                                                                website, where you'll discover more
+                                                                                about our projects, expertise, and how
+                                                                                we can collaborate to bring your
+                                                                                projects to life.</span></p>
+                                                                        <p><span
+                                                                                style="color: var(--color_8); display: initial;">Thank
+                                                                                you for your patience!</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sticky-widgets-container-global" id="1798578411"></div>
+                                        <div class="dmFooterContainer">
+                                            <div id="fcontainer"
+                                                class="u_fcontainer f_hcontainer dmFooter p_hfcontainer">
+                                                <div dm:templateorder="250" class="dmFooterResp generalFooter"
+                                                    id="1943048428">
+                                                    <div class="dmRespRow u_contact-us" id="contact-us">
+                                                        <div class="dmRespColsWrapper" id="1920995401">
+                                                            <div class="u_1101382842 dmRespCol small-12 large-5 medium-5"
+                                                                id="1101382842">
+                                                                <div class="dmNewParagraph u_1962793119"
+                                                                    data-element-type="paragraph" data-version="5"
+                                                                    id="1962793119"
+                                                                    style="transition: opacity 1s ease-in-out 0s;">
+                                                                    <h2><span
+                                                                            style="display: unset; color: rgb(255, 255, 255);">Contact
+                                                                            Us</span></h2>
+                                                                    <p><span
+                                                                            style="display: unset; color: rgb(255, 255, 255);">For
+                                                                            inquiries or collaborations, reach out to
+                                                                            us.</span></p>
+                                                                </div>
+                                                                <a data-display-type="block"
+                                                                    class="u_1966953899 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient"
+                                                                    file="false" href="tel:+61745878902"
+                                                                    data-element-type="dButtonLinkId" id="1966953899">
+                                                                    <span class="iconBg" aria-hidden="true"
+                                                                        id="1132090234"> <span
+                                                                            class="icon hasFontIcon icon-star"
+                                                                            id="1379124038"></span>
+                                                                    </span>
+                                                                    <span class="text" id="1778143899">07 4587
+                                                                        8902</span>
+                                                                </a>
+                                                                <a data-display-type="block"
+                                                                    class="u_1867805196 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient"
+                                                                    file="false" href="mailto:info@wdbuilddesign.com.au"
+                                                                    data-element-type="dButtonLinkId" id="1867805196">
+                                                                    <span class="iconBg" aria-hidden="true"
+                                                                        id="1163730855"> <span
+                                                                            class="icon hasFontIcon icon-star"
+                                                                            id="1133813888"></span>
+                                                                    </span>
+                                                                    <span class="text"
+                                                                        id="1681354334">info@wdbuilddesign.com.au</span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="u_1098119476 dmRespCol small-12 large-2 medium-2"
+                                                                id="1098119476">
+                                                                <div class="u_1318476079 imageWidget align-center"
+                                                                    data-element-type="image" data-widget-type="image"
+                                                                    id="1318476079"><img src="images/Arrow-icon2.svg"
+                                                                        alt="" id="1232832600" class=""
+                                                                        data-dm-image-path="https://irp.cdn-website.com/5bb54c53/dms3rep/multi/Arrow-icon2.svg"
+                                                                        width="93" height="150"
+                                                                        onerror="handleImageLoadError(this)"></div>
+                                                            </div>
+                                                            <div class="u_1608132363 dmRespCol empty-column small-12 large-5 medium-5"
+                                                                id="1608132363"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dmRespRow u_1110410989" id="1110410989">
+                                                        <div class="dmRespColsWrapper" id="1212546296">
+                                                            <div class="u_1279637268 dmRespCol small-12 large-3 medium-3"
+                                                                id="1279637268">
+                                                                <div class="u_1056652188 imageWidget align-center"
+                                                                    data-widget-type="image" id="1056652188"
+                                                                    data-element-type="image"
+                                                                    data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMucGVyc2lzdGVkLldELWxvZ28tc3RhY2tlZC13aGl0ZSJ9XQ==">
+                                                                    <a id="1032090055" class="" file="false"
+                                                                        href="/"><img
+                                                                            src="images/WD-logo-stacked-white.svg"
+                                                                            id="1908414758" class=""
+                                                                            data-dm-image-path="https://irp.cdn-website.com/5bb54c53/dms3rep/multi/WD-logo-stacked-white.svg"
+                                                                            data-hover-effect="opacity"
+                                                                            data-diy-image="" alt=""
+                                                                            onerror="handleImageLoadError(this)"></a>
+                                                                </div>
+                                                                <div class="u_1509741030 dmNewParagraph"
+                                                                    data-element-type="paragraph" data-version="5"
+                                                                    id="1509741030"
+                                                                    style="transition: opacity 1s ease-in-out 0s; text-align: left;">
+                                                                    <p
+                                                                        class="text-align-left m-text-align-center size-16 m-size-16">
+                                                                        <span
+                                                                            style="display: unset; color: var(--color_2);"
+                                                                            class="font-size-16 m-font-size-16"
+                                                                            m-font-size-set="true">QBCC Licence -
+                                                                            15243211</span></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="u_1076901608 dmRespCol small-12 large-6 medium-6"
+                                                                id="1076901608"> <a data-display-type="block"
+                                                                    class="u_1191707580 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient button_2"
+                                                                    file="false"
+                                                                    href="https://maps.app.goo.gl/ehCXyXpEJe2wKXsF6"
+                                                                    data-element-type="dButtonLinkId" id="1191707580"
+                                                                    target="_blank"> <span class="iconBg"
+                                                                        aria-hidden="true" id="1181426978"> <span
+                                                                            class="icon hasFontIcon icon-star"
+                                                                            id="1458243048"></span>
+                                                                    </span>
+                                                                    <span class="text" id="1284362408">37 Archibald St,
+                                                                        Dalby Qld 4405</span>
+                                                                </a>
+                                                                <div class="u_1262177194 align-center text-align-center dmSocialHub"
+                                                                    id="1262177194" dmle_extension="social_hub"
+                                                                    data-element-type="social_hub"
+                                                                    data-binding="W3siYmluZGluZ05hbWUiOiJzb2NpYWwiLCJ2YWx1ZSI6ImNvbnRlbnRfbGlicmFyeS5nbG9iYWwuc29jaWFsIn1d"
+                                                                    wr="true" networks="" icon="true" surround="true"
+                                                                    adwords="">
+                                                                    <div class="socialHubWrapper">
+                                                                        <div class="socialHubInnerDiv "> <a
+                                                                                href="https://facebook.com/WDBuildDesign/"
+                                                                                target="_blank"
+                                                                                dm_dont_rewrite_url="true"
+                                                                                aria-label="facebook"
+                                                                                onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Facebook')">
+                                                                                <span
+                                                                                    class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6"
+                                                                                    aria-hidden="true"
+                                                                                    data-hover-effect="opacity"></span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="u_1506505707 dmRespCol small-12 large-3 medium-3"
+                                                                id="1506505707">
+                                                                <div class="u_1783427700 widget-1f5975 dmCustomWidget"
+                                                                    data-lazy-load="" data-title="" id="1783427700"
+                                                                    dmle_extension="custom_extension"
+                                                                    data-element-type="custom_extension"
+                                                                    data-binding="W3siYmluZGluZ05hbWUiOiJjb3B5cmlnaHRUZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLmNvbXBhbnlfbmFtZSJ9XQ=="
+                                                                    icon="false" surround="false"
+                                                                    data-widget-id="1f5975986930429f819d4cd2154b5c4a"
+                                                                    data-widget-version="22"
+                                                                    data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiV0QgQnVpbGRpbmcgRGVzaWduIn0=">
+                                                                    <div class="copyright">
+                                                                        <div>© 2024�&nbsp;</div>
+                                                                        <div>WD Building Design</div>
+                                                                    </div>
+                                                                </div>
+                                                                <nav class="u_1628700273 unifiednav_vertical effect-bottom2 main-navigation unifiednav dmLinksMenu"
+                                                                    role="navigation"
+                                                                    layout-main="vertical_nav_layout_2" layout-sub=""
+                                                                    data-show-vertical-sub-items="HOVER" id="1628700273"
+                                                                    dmle_extension="onelinksmenu"
+                                                                    data-element-type="onelinksmenu" alt=""
+                                                                    data-nav-structure="VERTICAL" wr="true" icon="true"
+                                                                    surround="true" adwords=""
+                                                                    navigation-id="unifiedNav">
+                                                                    <ul role="menubar" class="unifiednav__container  "
+                                                                        data-auto="navigation-pages">
+                                                                        <li role="menuitem"
+                                                                            class=" unifiednav__item-wrap "
+                                                                            data-auto="more-pages" data-depth="0"> <a
+                                                                                href="https://www.wdbuilddesign.com.au/privacy"
+                                                                                class="unifiednav__item    " target=""
+                                                                                data-target-page-alias=""> <span
+                                                                                    class="nav-item-text "
+                                                                                    data-link-text="Privacy Policy"
+                                                                                    data-auto="page-text-style">Privacy
+                                                                                    Policy<span
+                                                                                        class="icon icon-angle-down"
+                                                                                        data-hidden-on-mobile=""
+                                                                                        data-hidden-on-desktop=""
+                                                                                        data-hidden-on-tablet=""></span>
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li role="menuitem"
+                                                                            class=" unifiednav__item-wrap "
+                                                                            data-auto="more-pages" data-depth="0"> <a
+                                                                                href="https://www.indigowebdesign.com.au/"
+                                                                                class="unifiednav__item    "
+                                                                                target="_blank"
+                                                                                data-target-page-alias=""> <span
+                                                                                    class="nav-item-text "
+                                                                                    data-link-text="Website by Indigo Web"
+                                                                                    data-auto="page-text-style">Website
+                                                                                    by Indigo Web<span
+                                                                                        class="icon icon-angle-down"
+                                                                                        data-hidden-on-mobile=""
+                                                                                        data-hidden-on-desktop=""
+                                                                                        data-hidden-on-tablet=""></span>
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="1236746004" dmle_extension="powered_by"
+                                                    data-element-type="powered_by" icon="true" surround="false"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--  Add full CSS and Javascript before the close tag of the body if needed -->
+    <!-- ========= JS Section ========= -->
+
+    <script>
+        var isWLR = true;
+
+        window.customWidgetsFunctions = {};
+        window.customWidgetsStrings = {};
+        window.collections = {};
+        window.currentLanguage = "ENGLISH_UK"
+        window.isSitePreview = false;
+    </script>
+    <script>
+        window.customWidgetsFunctions["1f5975986930429f819d4cd2154b5c4a~22"] = function (element, data, api) {
+            null
+        };
+    </script>
+    <script type="text/javascript">
+
+        var d_version = "production_4559";
+        var build = "2024-07-07T12_52_16";
+        window['v' + 'ersion'] = d_version;
+
+        function buildEditorParent() {
+            window.isMultiScreen = true;
+            window.editorParent = {};
+            window.previewParent = {};
+            window.assetsCacheQueryParam = "?version=2024-07-07T12_52_16";
+            try {
+                var _p = window.parent;
+                if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                    window.editorParent = _p;
+                } else if (_p.isSitePreview) {
+                    window.previewParent = _p;
+                }
+            } catch (e) {
+
+            }
+        }
+
+        buildEditorParent();
+    </script>
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" id="d-js-jquery" src="js/jquery-3.7.0.min.js"></script>
+    <!-- End Load jQuery -->
+    <!-- Injecting site-wide before scripts -->
+    <!-- End Injecting site-wide to the head -->
+
+
+    <script>
+        var _jquery = window.$;
+
+        var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+        jqueryAliases.forEach((alias) => {
+            Object.defineProperty(window, alias, {
+                get() {
+                    return _jquery;
+                },
+                set() {
+                    console.warn("Trying to over-write the global jquery object!");
+                }
+            });
+        });
+        window.jQuery.migrateMute = true;
+    </script>
+    <script>
+        window.cookiesNotificationMarkupPreview = 'null';
+    </script>
+
+    <!-- HEAD RT JS Include -->
+    <script id="d-js-params">
+        window.INSITE = window.INSITE || {};
+        window.INSITE.device = "desktop";
+
+        window.rtCommonProps = {};
+        rtCommonProps["rt.ajax.ajaxScriptsFix"] = true;
+        rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+        rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+        rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+        rtCommonProps["inlineEditGrid.snap"] = true;
+        rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+        rtCommonProps["rt.pushnotifs.force.button"] = true;
+        rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+        rtCommonProps["common.mapbox.js.override"] = false;
+        rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+        rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+        rtCommonProps["isCoverage.test"] = false;
+        rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+        rtCommonProps["feature.flag.mappy.kml"] = false;
+        rtCommonProps["common.resources.dist.cdn"] = true;
+        rtCommonProps["common.build.dist.folder"] = 'production/4559';
+        rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+        rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4559';
+        rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] = true;
+        rtCommonProps["feature.flag.runtime.photoswipe.fix"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.sites.google.analytics.gtag"] = true;
+        rtCommonProps["feature.flag.runOnReadyNewTask"] = true;
+        rtCommonProps["isAutomation.test"] = false;
+
+
+        rtCommonProps['common.mapsProvider'] = 'mapbox';
+
+        rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+        rtCommonProps['common.geocodeProvider'] = 'here';
+        rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+        rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+        rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+        rtCommonProps['common.map.defaults.strokeSize'] = '2';
+        rtCommonProps['server.for.resources'] = '';
+        rtCommonProps['feature.flag.lazy.widgets'] = true;
+        rtCommonProps['feature.flag.single.wow'] = false;
+        rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+        rtCommonProps['feature.flag.mark.anchors'] = true;
+        rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+        rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+        rtCommonProps["images.sizes.small"] = 160;
+        rtCommonProps["images.sizes.mobile"] = 640;
+        rtCommonProps["images.sizes.tablet"] = 1280;
+        rtCommonProps["images.sizes.desktop"] = 1920;
+        rtCommonProps["modules.resources.cdn"] = true;
+        rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+        rtCommonProps["facebook.api.version"] = '7.0';
+        rtCommonProps["feature.flag.runtime.inp.threshold"] = 150;
+        rtCommonProps["feature.flag.performance.logs"] = true;
+        rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+        rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+        rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+        rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] = false;
+
+        // feature flags that's used out of runtime module (in  legacy files)
+        rtCommonProps["site.runtime.video.background.ssr"] = true;
+
+        window.rtFlags = {};
+        rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] = true;
+        rtFlags["keyboard.navigation.enabled"] = true;
+        rtFlags["scripts.widgetCount.enabled"] = true;
+        rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+        rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+        rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+        rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+        rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+        rtFlags["feature.flag.photo.gallery.exact.size"] = false;
+        rtFlags["new.store.fix.ecwid.back.bug"] = true;
+        rtFlags["facebook.runtime.widgets.upgrade"] = true;
+        rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+        rtFlags["ecom.ecwid.configOptions"] = true;
+        rtFlags["geocode.search.localize"] = false;
+        rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] = false;
+        rtFlags["site.contact.form.fix.for.attribute"] = true;
+        rtFlags["contact.form.date.format.enabled"] = true;
+        rtFlags["twitter.heightLimit.enabled"] = true;
+        rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+        rtFlags["runtime.load.script.native"] = true;
+        rtFlags["editor.classicHybrid.photogallery.fix"] = true;
+        rtFlags["runtime.lottieOverflow"] = false;
+        rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+        rtFlags["ecom.ecwid.old.store.fix.scrolling.detect.enable"] = true;
+    </script>
+    <script src="js/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+    <!-- End of HEAD RT JS Include -->
+    <script src="js/d-js-jquery-migrate.min.js"></script>
+    <script>
+
+        $(window).bind("orientationchange", function (e) {
+            $.layoutManager.initLayout();
+
+        });
+        $(document).resize(function () {
+
+        });
+    </script>
+    <script type="text/javascript" id="d_track_campaign">
+        (function () {
+            var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+            if (campaign && campaign != null && campaign.length > 1) {
+                campaign = campaign[1];
+                document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24 * 60 * 60 * 1000 + ";domain=" + window.location.hostname + ";path=/";
+            }
+        }());
+    </script>
+    <script type="text/javascript">
+        var _dm_gaq = {};
+        var _gaq = _gaq || [];
+        var _dm_insite = [];
+    </script>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y46JZ4KY3D"></script>
+    <script type="text/javascript" id="d_track_ga">
+        _dm_gaq.siteAlias = '5bb54c53';
+        _dm_gaq.systemAggregatedGaqID = '';
+        _dm_gaq.externalGaqID = 'G-Y46JZ4KY3D';
+        _dm_gaq.gaAggregatedEventAttributes = {
+            'site_alias': _dm_gaq.siteAlias,
+            'product': 'DM_DIRECT',
+            'plan': 'BUSINESS_PLUS',
+            'dfooter': 'false',
+            'sitetype': '1',
+            'pwaEnabled': 'true'
+        }
+
+        _dm_gaq.pushEvent = function (trackingId, event, category, label, value, additionalParams = {}) {
+            const eventProps = {
+                send_to: trackingId,
+                event_category: category,
+                event_label: label,
+                value,
+                ...additionalParams,
+                ...(trackingId === _dm_gaq.systemAggregatedGaqID
+                    ? _dm_gaq.gaAggregatedEventAttributes : {})
+            };
+            gtag('event', event, eventProps);
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        function pushInsiteImpressions(id) {
+            _dm_insite.forEach((rule) => {
+                _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+            });
+        }
+
+        if (_dm_gaq.systemAggregatedGaqID) {
+            // track aggregated account
+            gtag('config', '', {
+                'send_page_view': false,
+                'anonymize_ip': true,
+                'transport_type': 'beacon',
+                'custom_map': { 'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype' }
+            });
+            gtag('set', 'developer_id.dMDU5Nj', true);
+
+            _dm_gaq.pushEvent('', 'page_view');
+            pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+        }
+
+        if (_dm_gaq.externalGaqID && _dm_gaq.externalGaqID != '') {
+            gtag('config', 'G-Y46JZ4KY3D', {
+                'send_page_view': false,
+                'anonymize_ip': true,
+                'transport_type': 'beacon',
+                'linker': {
+                    'domains': ['wdbuilddesign.com.au']
+                }
+            });
+            _dm_gaq.pushEvent('G-Y46JZ4KY3D', 'page_view');
+            pushInsiteImpressions(_dm_gaq.externalGaqID);
+        }
+    </script>
+    <script type="text/javascript" id="d_track_sp">
+        ; (function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i); p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                }; p[i].q = p[i].q || []; n = l.createElement(o); g = l.getElementsByTagName(o)[0]; n.async = 1;
+                n.src = w; g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js", "snowplow"));
+        window.dmsnowplow = window.snowplow;
+
+        dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+            appId: '5bb54c53'
+        });
+
+        // snowplow queries element styles so we wait until CSS calculations are done.
+        requestAnimationFrame(() => {
+            dmsnowplow('trackPageView');
+            _dm_insite.forEach((rule) => {
+                // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+                // the tracking is in popup.js
+                if (rule.actionName !== "popup") {
+                    dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+                }
+                window?.waitForDeferred?.('dmAjax', () => {
+                    $.DM.events.trigger('event-ruleTriggered', { value: rule });
+                });
+            });
+        });
+    </script>
+    <div style="display:none;" id="P6iryBW0Wu"></div>
+
+    <!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="fb-root" data-locale="en_GB"></div>
+    <!-- Alias: 5bb54c53 -->
+    <div class="dmPopupMask" id="dmPopupMask"></div>
+    <div id="dmPopup" class="dmPopup">
+        <div class="dmPopupCloseWrapper">
+            <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div>
+        </div>
+        <div class="dmPopupTitle"> <span></span> Share by:</div>
+        <div class="data"></div>
+    </div>
+    <script id="d_track_personalization">
+        window?.waitForDeferred?.('dmAjax', () => {
+            // Collects client data and updates cookies used by smart sites
+            window.expireDays = 365;
+            window.visitLength = 30 * 60000;
+            $.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+            setSmartSiteCookiesInternal("dm_this_page_view", "dm_last_page_view", "dm_total_visits", "dm_last_visit");
+        });
+    </script>
+    <script type="text/javascript">
+
+        Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+
+        Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+        Parameters.HomeLinkText = 'Home';
+    </script>
+    <!--  End Script tags -->
+
+    <!--  Begin Body End Markup -->
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=516338269425902&ev=PageView&noscript=1" /></noscript>
+
+    <!-- End Facebook Pixel Code --><!--  End Body End Markup -->
+
+    <!--  Site Wide Html Markup -->
+    <!--  Site Wide Html Markup -->
+
+
+</body>
+
+</html>
