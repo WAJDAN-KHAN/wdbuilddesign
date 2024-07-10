@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="menu-items">
-                    <a href="" class="contact">
+                    <a href="#contact-section" class="contact">
                         Contact Us
                     </a>
                     <a href="" class="phone">
@@ -40,7 +40,7 @@
             <div class="close-btn" onclick="toggleDrawer()">
                 <img src="./assets/images/close (2).png" alt="">
             </div>
-            <a href="" class="contact">
+            <a href="#contact-section" class="contact">
                 Contact Us
             </a>
 
@@ -83,7 +83,7 @@
         </div>
     </section>
 
-    <section class="dmFooterContainer">
+    <section class="dmFooterContainer" id="contact-section">
         <div class="u_fcontainer f_hcontainer dmFooter p_hfcontainer">
             <div class="dmFooterResp generalFooter">
                 <div class="dmRespRow u_contact-us">
@@ -123,8 +123,8 @@
                             </div>
                             <div class="">
                                 <a href=""
-                                    class="u_1966953899 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient">
-                                    <span class="text" id="1778143899">37 Archibald St, Dalby Qld 4405</span></a>
+                                    class="u_19669538999 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient">
+                                    <span class="text2" id="1778143899">37 Archibald St, Dalby Qld 4405</span></a>
                                 <div href="" class="facbook">
                                     <img src="./assets/images/facbook.png" alt="">
 
@@ -161,6 +161,14 @@
             overlay.classList.toggle('open');
         }
 
+    </script>
+    <script>
+        document.querySelector('.contact').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#contact-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 
